@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#topo {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    padding: 1.5vh 0;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+#topo h1 {
+    background-image: linear-gradient(to right, rgb(199, 23, 23), rgb(138, 32, 32));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o ícone à esquerda */
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, rgba(45, 119, 179, 0.603), rgb(0, 74, 158)); 
+    width: 100%;
+    height: 8vh; /* Ajustado a altura */
+    border: 2px solid white;
+    padding: 0 2vw; /* Ajuste para espaçamento */
+}
+
+#menu a#menu-toggle {
+    font-size: 2rem; /* Aumentei o tamanho do ícone */
+    color: white;
+    text-decoration: none;
+    padding: 1vh; /* Ajustado o padding */
+    display: block;
+    width: 25%; /* O ícone ocupa 25% da largura */
+    text-align: center;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: flex-start;
+    width: 75%; /* Os links ocupam o restante da largura */
+    padding-left: 0; /* Remove o espaçamento extra */
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    padding: 2vh 0; /* Ajustado o padding */
+    text-align: center;
+    width: 25%; /* Largura de cada link será 25% */
+    display: flex; /* Usando flexbox para garantir que o texto seja centralizado */
+    justify-content: center;
+    align-items: center;
+    transition: background-image 0.5s, color 0.3s; /* Suavizando transições */
+    height: 100%; /* Faz o link ocupar toda a altura da célula */
+    border-right: 2px solid white; /* Borda entre os links */
+    box-sizing: border-box; /* Garante que o padding não afete o tamanho do link */
+}
+
+/* Remove a borda do último item */
+.menu-links a:last-child {
+    border-right: none;
+}
+
+/* Efeito hover nos links */
+.menu-links a:hover {
+    color: #f1f1f1; /* Mudando a cor do texto no hover */
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255)); /* Efeito de fundo */
+    height: 100%; /* Garantindo que o hover cubra toda a altura do link */
+    width: 100%; /* Garantindo que o hover cubra toda a largura do link */
+    display: flex; /* Garantindo que o texto permaneça centralizado */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menu lateral - inicialmente escondido */
+#menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 9999;
+}
+
+/* Links dentro do menu lateral */
+#menu-lateral a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid white;
+}
+
+#menu-lateral a:hover {
+    color: #f1f1f1;
+}
+
+/* Botão de fechar no menu lateral */
+#close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #818181;
+    text-decoration: none;
+}
+
+#close-btn:hover {
+    color: #f1f1f1;
+}
+
+/* Quando o menu lateral está aberto */
+#menu-lateral.open {
+    width: 250px;
+}

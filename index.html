@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.D.G</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="imagens/club.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+
+        <div id="topo">
+            <img src="imagens/club.jpg" alt="">
+            <h1><i class="fas fa-crown"></i> R . D . G <i class="fas fa-crown"></i></h1>
+        </div>
+
+        <!-- Menu Principal -->
+        <div id="menu">
+            <!-- Botão de abrir o menu -->
+            <a href="javascript:void(0);" id="menu-toggle">☰</a>
+
+            <!-- Links de navegação (Home, Produtos, Contato) dentro do menu -->
+            <div class="menu-links">
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </div>
+
+        <!-- Menu lateral (inicialmente escondido) -->
+        <div id="menu-lateral">
+            <a href="javascript:void(0);" id="close-btn">×</a>
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </div>
+
+    </div>
+
+    <script>
+        // Obtendo os elementos
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuLateral = document.getElementById("menu-lateral");
+        const closeBtn = document.getElementById("close-btn");
+
+        // Abrir o menu lateral
+        menuToggle.addEventListener("click", () => {
+            menuLateral.classList.add("open"); // Adiciona a classe 'open' para abrir
+        });
+
+        // Fechar o menu lateral
+        closeBtn.addEventListener("click", () => {
+            menuLateral.classList.remove("open"); // Remove a classe 'open' para fechar
+        });
+    </script>
+
+</body>
+</html>
