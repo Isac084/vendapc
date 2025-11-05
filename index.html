@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="shortcut icon" href="imagens/club.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
-
+        
+        <!-- TOPO -->
         <div id="topo">
             <img src="imagens/club.jpg" alt="">
             <h1><i class="fas fa-crown"></i> R . D . G <i class="fas fa-crown"></i></h1>
         </div>
 
-        <!-- Menu Principal -->
+        <!-- MENU PRINCIPAL -->
         <div id="menu">
-            <!-- Botão de abrir o menu -->
             <a href="javascript:void(0);" id="menu-toggle">☰</a>
-
-            <!-- Links de navegação (Home, Produtos, Contato) dentro do menu -->
             <div class="menu-links">
                 <a href="index.html">Home</a>
                 <a href="produtos.html">Produtos</a>
@@ -29,7 +28,7 @@
             </div>
         </div>
 
-        <!-- Menu lateral (inicialmente escondido) -->
+        <!-- MENU LATERAL -->
         <div id="menu-lateral">
             <a href="javascript:void(0);" id="close-btn">×</a>
             <a href="index.html">Home</a>
@@ -37,24 +36,35 @@
             <a href="contato.html">Contato</a>
         </div>
 
+        <!-- BANNER -->
+        <section id="banner">
+            <div class="banner-content">
+                <h1>Computadores de Alta Performance</h1>
+                <p>Encontre o computador ideal para jogos, trabalho ou estudo.</p>
+                <a href="#servicos" class="btn-banner">Confira Nossos Produtos</a>
+            </div>
+            
+        </section>
     </div>
+     
+    <main>
+        <div id="ftrans">
+              
 
-    <script>
-        // Obtendo os elementos
-        const menuToggle = document.getElementById("menu-toggle");
-        const menuLateral = document.getElementById("menu-lateral");
-        const closeBtn = document.getElementById("close-btn");
 
-        // Abrir o menu lateral
-        menuToggle.addEventListener("click", () => {
-            menuLateral.classList.add("open"); // Adiciona a classe 'open' para abrir
-        });
+        </div>
 
-        // Fechar o menu lateral
-        closeBtn.addEventListener("click", () => {
-            menuLateral.classList.remove("open"); // Remove a classe 'open' para fechar
-        });
-    </script>
+
+
+
+
+    </main>
+    
+
+
+
+    <!-- LINK PARA O JS EXTERNO -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
