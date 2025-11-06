@@ -22,3 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// ===== CARROSSEL =====
+const slides = document.querySelector('#ftrans .slides');
+const imagens = document.querySelectorAll('#ftrans .slides img');
+const prevBtn = document.querySelector('#ftrans .prev');
+const nextBtn = document.querySelector('#ftrans .next');
+
+let index = 0;
+const total = imagens.length;
+
+// Função que atualiza a posição
+function mostrarSlide(n) {
+  index = (n + total) % total; // volta ao início no último
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Botões
+nextBtn.addEventListener('click', () => mostrarSlide(index + 1));
+prevBtn.addEventListener('click', () => mostrarSlide(index - 1));
+
+// Troca automática
+setInterval(() => mostrarSlide(index + 1), 4000);

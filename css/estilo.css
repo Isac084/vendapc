@@ -1,3 +1,4 @@
+/* ==================== RESET E BASE ==================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +10,7 @@ body {
     background-color: black;
 }
 
-/* ===== TOPO ===== */
+/* ==================== TOPO ==================== */
 #topo {
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@ body {
     padding: 10px;
 }
 
-/* ===== MENU PRINCIPAL ===== */
+/* ==================== MENU PRINCIPAL ==================== */
 #menu {
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@ body {
     background-position: center;
 }
 
-/* ===== MENU LATERAL ===== */
+/* ==================== MENU LATERAL ==================== */
 #menu-lateral {
     height: 100%;
     width: 0;
@@ -132,7 +133,7 @@ body {
     width: 250px;
 }
 
-/* ===== BANNER ===== */
+/* ==================== BANNER ==================== */
 #banner {
     position: relative;
     width: 100%;
@@ -143,6 +144,8 @@ body {
     align-items: center;
     text-align: center;
     color: white;
+    border-bottom: 3px solid white;
+    margin-bottom: 2vh;
 }
 
 #banner::before {
@@ -188,4 +191,112 @@ body {
 .btn-banner:hover {
     background-color: #C71717;
     border-color: #C71717;
+}
+
+/* ==================== SLIDE SECTION ==================== */
+#sla {
+    display: flex;
+}
+
+#lado1 {
+    background-color: #C71717;
+    width: 15%;
+}
+
+#lado2 {
+    background-color: #C71717;
+    width: 15%;
+}
+
+/* ==================== CARROSSEL ==================== */
+#ftrans {
+  position: relative;
+  width: 95%;
+  height: 50vh;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s ease-in-out; /* animação de deslizamento */
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Botões laterais */
+#ftrans button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  z-index: 5;
+}
+
+#ftrans button:hover {
+  background: rgba(199, 23, 23, 0.8);
+}
+
+#ftrans .prev { left: 10px; }
+#ftrans .next { right: 10px; }
+
+/* Responsivo */
+@media (max-width: 900px) {
+  #ftrans {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+
+/* ==================== VENDAS (reservado futuro) ==================== */
+#vendas {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(8, 20%);
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 900px) {
+    #ftrans {
+        width: 100%;
+        height: 160px;
+    }
+
+    #lado1, #lado2 {
+        display: none;
+    }
+
+    #sla {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.1rem;
+    }
+}
+
+#direitos{
+    color: grey;
+    font-size: 2rem;
 }
