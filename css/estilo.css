@@ -18,6 +18,7 @@ body {
     padding: 1.5vh 0;
     background-color: black;
     border-bottom: 2px solid white;
+
 }
 
 #topo h1 {
@@ -189,7 +190,10 @@ body {
     transition: 0.3s;
     position: relative;
     z-index: 2;
+
 }
+
+
 
 .btn-banner:hover {
     background-color: #C71717;
@@ -304,73 +308,195 @@ body {
 
 
 #direitos {
-    color: grey;
+    color: black;
     font-size: 1.2rem;
     background-color: rgb(185, 50, 50);
     border-radius: 10px;
-    border: 2px solid white;
+    border: 2px solid black;
     margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#redesocial {}
 
 /*******PRODUTOS*******/
-#compras {
+.compras {
     display: grid;
     grid-template-columns: repeat(4, minmax(20%, 1fr));
     gap: 20px;
+    border: 2px solid white;
+    margin: 2vh;
+    padding: 1%;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
 }
-.pc img{
+
+.pc img {
     width: 100%;
     height: auto;
     display: block;
 }
-.pc h3{
+
+.pc h3 {
     color: white;
     text-decoration: none;
 }
+
 .pc {
     /*grid-column: 1;*/
     margin: 1%;
+    transition: transform 0.4s ease;
 }
-h2{
+
+.pc:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+h2 {
     color: white;
     text-align: center;
     background-color: rgb(180, 42, 42);
     margin: 2vh;
+    box-shadow: 2px 2px 5px powderblue;
 }
+
 .search-box {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-  width: 300px; /* Exemplo de largura */
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+    /* Exemplo de largura */
 }
 
 .search-input {
-  border: none;
-  outline: none;
-  flex-grow: 1;
-  padding: 5px;
-  font-size: 16px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
 }
 
 .search-button {
-  background-color: rgb(218, 53, 53);
-  color: white;
-  border: none;
-  border-radius: 3px;
-  padding: 5px 10px;
-  cursor: pointer;
-  margin: 1%;
+    background-color: rgb(218, 53, 53);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 1%;
 }
 
 .search-button:hover {
-  background-color: rgb(143, 28, 28);
+    background-color: rgb(143, 28, 28);
 }
 
-#pesquisa{
+#pesquisa {
     margin: 1%;
     display: flex;
     justify-content: center;
+}
+
+#agradecimento {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#agradecimento img:hover {
+    animation: spin 0.6s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/********LOGIN********/
+
+#tela {
+    color: white;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
+    border: 2px solid white;
+    margin: 2vh;
+    margin-top: 3vh;
+}
+
+
+/******** LOGIN ********/
+#tela-login {
+    color: white;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
+    border: 2px solid white;
+    border-radius: 12px;
+    width: 400px;
+    margin: 6vh auto;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#tela-login h1 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+#tela-login h4 {
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+#tela-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tela-login input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+#tela-login button {
+    width: 85%;
+    padding: 12px;
+    background-color: rgb(218, 53, 53);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#tela-login button:hover {
+    background-color: rgb(143, 28, 28);
+}
+
+#tela-login p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+#tela-login a {
+    color: #ff8888;
+    text-decoration: none;
+}
+
+#tela-login a:hover {
+    text-decoration: underline;
 }
