@@ -18,12 +18,11 @@ body {
     padding: 1.5vh 0;
     background-color: black;
     border-bottom: 2px solid white;
-
 }
 
 #topo h1 {
     font-family: 'Cinzel', serif;
-    background-image: linear-gradient(to right, rgb(199, 23, 23), rgb(138, 32, 32));
+    background-image: linear-gradient(to right, rgb(255, 204, 0), rgb(219, 173, 19));
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
@@ -39,7 +38,7 @@ body {
     align-items: center;
     width: 100%;
     height: 8vh;
-    background-image: linear-gradient(to right, rgba(45, 119, 179, 0.603), rgb(0, 74, 158));
+    background-image: linear-gradient(to right, rgba(255, 213, 0, 0.603), rgb(255, 204, 0));
     border: 2px solid white;
 }
 
@@ -84,7 +83,7 @@ body {
 
 .menu-links a:hover {
     color: #ffffff;
-    background-image: linear-gradient(to right, #001233, #003366);
+    background-image: linear-gradient(to right, #332b00, #b89e00);
     background-size: cover;
     background-position: center;
 }
@@ -139,7 +138,7 @@ body {
     position: relative;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #FFD700, #b8860b);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,7 +168,7 @@ body {
 .banner-content h1 {
     font-family: 'Cinzel', serif;
     font-size: 4rem;
-    background-image: linear-gradient(to right, #FF5555, #FFFFFF);
+    background-image: linear-gradient(to right, #FFD700, #FFF8DC);
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 20px;
@@ -190,32 +189,15 @@ body {
     transition: 0.3s;
     position: relative;
     z-index: 2;
-
 }
-
-
 
 .btn-banner:hover {
-    background-color: #C71717;
-    border-color: #C71717;
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: black;
 }
 
-/* ==================== SLIDE SECTION ==================== */
-#sla {
-    display: flex;
-}
-
-#lado1 {
-    background-color: #C71717;
-    width: 15%;
-}
-
-#lado2 {
-    background-color: #C71717;
-    width: 15%;
-}
-
-/* ==================== CARROSSEL ==================== */
+/* ==================== FTRANS ==================== */
 #ftrans {
     position: relative;
     width: 95%;
@@ -230,7 +212,6 @@ body {
     display: flex;
     height: 100%;
     transition: transform 0.8s ease-in-out;
-    /* animação de deslizamento */
 }
 
 .slides img {
@@ -240,7 +221,6 @@ body {
     object-fit: cover;
 }
 
-/* Botões laterais */
 #ftrans button {
     position: absolute;
     top: 50%;
@@ -257,7 +237,7 @@ body {
 }
 
 #ftrans button:hover {
-    background: rgba(199, 23, 23, 0.8);
+    background: rgba(255, 215, 0, 0.8);
 }
 
 #ftrans .prev {
@@ -268,60 +248,13 @@ body {
     right: 10px;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-    #ftrans {
-        width: 100%;
-        height: 160px;
-    }
-}
-
-
-/* ==================== VENDAS (reservado futuro) ==================== */
-
-/* ==================== RESPONSIVIDADE ==================== */
-@media (max-width: 900px) {
-    #ftrans {
-        width: 100%;
-        height: 160px;
-    }
-
-    #lado1,
-    #lado2 {
-        display: none;
-    }
-
-    #sla {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .banner-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .banner-content p {
-        font-size: 1.1rem;
-    }
-}
-
-
-
-#direitos {
-    color: black;
-    font-size: 1.2rem;
-    background-color: rgb(185, 50, 50);
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-top: 2vh;
+/* ==================== PRODUTOS ==================== */
+#pesquisa {
+    margin: 1%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-#redesocial {}
-
-/*******PRODUTOS*******/
 .compras {
     display: grid;
     grid-template-columns: repeat(4, minmax(20%, 1fr));
@@ -329,13 +262,23 @@ body {
     border: 2px solid white;
     margin: 2vh;
     padding: 1%;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #FFD700, #b8860b);
 }
-
+#agradecimento{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#agradecimento img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 .pc img {
     width: 100%;
     height: auto;
     display: block;
+    
 }
 
 .pc h3 {
@@ -344,115 +287,74 @@ body {
 }
 
 .pc {
-    /*grid-column: 1;*/
     margin: 1%;
-    transition: transform 0.4s ease;
-}
-
-.pc:hover {
-    transform: translateY(-10px) scale(1.05);
 }
 
 h2 {
     color: white;
     text-align: center;
-    background-color: rgb(180, 42, 42);
+    background-color: rgb(199, 174, 35);
     margin: 2vh;
-    box-shadow: 2px 2px 5px powderblue;
+    box-shadow: 2px 2px 5px gold;
 }
 
-.search-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    width: 300px;
-    /* Exemplo de largura */
-}
-
-.search-input {
-    border: none;
-    outline: none;
-    flex-grow: 1;
-    padding: 5px;
-    font-size: 16px;
-}
-
-.search-button {
-    background-color: rgb(218, 53, 53);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin: 1%;
-}
-
-.search-button:hover {
-    background-color: rgb(143, 28, 28);
-}
-
-#pesquisa {
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-}
-
-#agradecimento {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#agradecimento img:hover {
-    animation: spin 0.6s linear;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0);
-    }
-
-    to {
-        transform: rotate(360deg);
+/* ======== RESPONSIVIDADE PRODUTOS ======== */
+@media (max-width: 1000px) {
+    .compras {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/********LOGIN********/
-
-#tela {
-    color: white;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
-    border: 2px solid white;
-    margin: 2vh;
-    margin-top: 3vh;
+@media (max-width: 600px) {
+    .compras {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-
-/******** LOGIN ********/
+/* ==================== LOGIN ==================== */
+/* ==================== LOGIN ==================== */
 #tela-login {
     color: white;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #e61c1cff, #002c6b);
-    border: 2px solid white;
+    background: linear-gradient(135deg, #1a1a1a, #222, #cfae37, #8f7400);
+    border: 2px solid gold;
     border-radius: 12px;
     width: 400px;
-    margin: 6vh auto;
+    margin: 8vh auto;
     padding: 40px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    animation: brilhoFundo 6s infinite alternate;
+}
+
+@keyframes brilhoFundo {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
 }
 
 #tela-login h1 {
     font-family: 'Cinzel', serif;
     margin-bottom: 10px;
     font-size: 2rem;
+    color: gold;
+    animation: brilhoTexto 3s infinite alternate;
+}
+
+@keyframes brilhoTexto {
+    0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+    100% { text-shadow: 0 0 25px rgba(255, 255, 150, 1); }
 }
 
 #tela-login h4 {
     font-weight: normal;
     margin-bottom: 25px;
+    color: #f8e98d;
 }
 
 #tela-login form {
@@ -465,26 +367,42 @@ h2 {
     width: 80%;
     padding: 12px;
     margin: 10px 0;
-    border: none;
+    border: 1px solid gold;
     border-radius: 8px;
     outline: none;
     font-size: 1rem;
+    background-color: #2a2a2a;
+    color: white;
+    transition: 0.3s;
+}
+
+#tela-login input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px gold;
 }
 
 #tela-login button {
     width: 85%;
     padding: 12px;
-    background-color: rgb(218, 53, 53);
+    background-color: #cfae37;
     border: none;
     border-radius: 8px;
-    color: white;
+    color: black;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
+    animation: pulsarBotao 2.5s infinite ease-in-out;
 }
 
 #tela-login button:hover {
-    background-color: rgb(143, 28, 28);
+    background-color: #ffdf00;
+}
+
+@keyframes pulsarBotao {
+    0% { transform: scale(1); box-shadow: 0 0 8px rgba(255, 215, 0, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 0 18px rgba(255, 215, 0, 0.7); }
+    100% { transform: scale(1); box-shadow: 0 0 8px rgba(255, 215, 0, 0.3); }
 }
 
 #tela-login p {
@@ -493,10 +411,24 @@ h2 {
 }
 
 #tela-login a {
-    color: #ff8888;
+    color: #ffdd55;
     text-decoration: none;
 }
 
 #tela-login a:hover {
     text-decoration: underline;
+}
+
+
+/* ==================== DIREITOS ==================== */
+#direitos {
+    color: black;
+    font-size: 1.2rem;
+    background-color: #ebd456;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
