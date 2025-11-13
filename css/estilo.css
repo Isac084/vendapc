@@ -8,6 +8,8 @@
 
 body {
     background-color: black;
+    color: white;
+    overflow-x: hidden;
 }
 
 /* ==================== TOPO ==================== */
@@ -18,6 +20,9 @@ body {
     padding: 1.5vh 0;
     background-color: black;
     border-bottom: 2px solid white;
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: surgirTopo 1.5s ease-out forwards;
 }
 
 #topo h1 {
@@ -30,6 +35,7 @@ body {
     font-weight: bold;
     text-align: center;
     padding: 10px;
+    animation: brilhoTitulo 3s ease-in-out infinite alternate;
 }
 
 /* ==================== MENU PRINCIPAL ==================== */
@@ -40,6 +46,8 @@ body {
     height: 8vh;
     background-image: linear-gradient(to right, rgba(255, 213, 0, 0.603), rgb(255, 204, 0));
     border: 2px solid white;
+    animation: fadeIn 1.5s ease-in forwards;
+    opacity: 0;
 }
 
 #menu a#menu-toggle {
@@ -50,6 +58,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: pulsar 2s infinite ease-in-out;
 }
 
 .menu-links {
@@ -68,7 +77,7 @@ body {
     height: 100%;
     font-weight: 500;
     position: relative;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s;
 }
 
 .menu-links a:not(:last-child)::after {
@@ -84,8 +93,7 @@ body {
 .menu-links a:hover {
     color: #ffffff;
     background-image: linear-gradient(to right, #332b00, #b89e00);
-    background-size: cover;
-    background-position: center;
+    transform: scale(1.05);
 }
 
 /* ==================== MENU LATERAL ==================== */
@@ -113,7 +121,8 @@ body {
 }
 
 #menu-lateral a:hover {
-    color: #f1f1f1;
+    color: gold;
+    transform: translateX(5px);
 }
 
 #close-btn {
@@ -126,7 +135,7 @@ body {
 }
 
 #close-btn:hover {
-    color: #f1f1f1;
+    color: gold;
 }
 
 #menu-lateral.open {
@@ -146,6 +155,8 @@ body {
     color: white;
     border-bottom: 3px solid white;
     margin-bottom: 2vh;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
 }
 
 #banner::before {
@@ -172,7 +183,7 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: brilhoTitulo 3s ease-in-out infinite alternate;
 }
 
 .banner-content p {
@@ -195,6 +206,7 @@ body {
     background-color: #FFD700;
     border-color: #FFD700;
     color: black;
+    transform: scale(1.1);
 }
 
 /* ==================== FTRANS ==================== */
@@ -206,6 +218,7 @@ body {
     overflow: hidden;
     border: 2px solid white;
     border-radius: 10px;
+    animation: fadeIn 1.5s ease-in forwards;
 }
 
 .slides {
@@ -221,6 +234,7 @@ body {
     object-fit: cover;
 }
 
+/* --- Corrige posição dos botões do carrossel --- */
 #ftrans button {
     position: absolute;
     top: 50%;
@@ -232,21 +246,26 @@ body {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 5;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 10;
 }
 
-#ftrans button:hover {
-    background: rgba(255, 215, 0, 0.8);
-}
-
-#ftrans .prev {
+/* Botão esquerdo */
+#ftrans button:first-of-type {
     left: 10px;
 }
 
-#ftrans .next {
+/* Botão direito */
+#ftrans button:last-of-type {
     right: 10px;
 }
+
+/* Efeito hover */
+#ftrans button:hover {
+    background: rgba(255, 215, 0, 0.8);
+    transform: scale(1.2);
+}
+
 
 /* ==================== PRODUTOS ==================== */
 #pesquisa {
@@ -264,30 +283,39 @@ body {
     padding: 1%;
     background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #FFD700, #b8860b);
 }
-#agradecimento{
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
+
+.pc {
+    margin: 1%;
+    background-color: #111;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecerItem 1s ease-out forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-#agradecimento img:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
+
 .pc img {
     width: 100%;
     height: auto;
     display: block;
-    
+    transition: transform 0.4s;
+}
+
+.pc:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+.pc:hover img {
+    transform: scale(1.1);
 }
 
 .pc h3 {
     color: white;
-    text-decoration: none;
-}
-
-.pc {
-    margin: 1%;
+    text-align: center;
+    padding: 10px;
 }
 
 h2 {
@@ -296,38 +324,33 @@ h2 {
     background-color: rgb(199, 174, 35);
     margin: 2vh;
     box-shadow: 2px 2px 5px gold;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
-/* ======== RESPONSIVIDADE PRODUTOS ======== */
-@media (max-width: 1000px) {
-    .compras {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .banner-content h1 {
-        font-size: 2rem;
-    }
-    #topo h1 {
-        font-size: 3rem;
-    }
-    #topo img{
-        width: 10vw;
-    }
+/* ==================== AGRADECIMENTO ==================== */
+#agradecimento {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: subir 1.5s ease-out forwards;
 }
 
-@media (max-width: 600px) {
-    .compras {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    #topo h1{
-        font-size: 1.8rem;
-    }
-    #topo img{
-        width: 8vw;
-    }
+#agradecimento img {
+    border-radius: 50%;
+    width: 180px;
+    animation: girarLento 10s linear infinite;
+}
+
+#agradecimento img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 /* ==================== LOGIN ==================== */
-
 #tela-login {
     color: white;
     background: linear-gradient(135deg, #1a1a1a, #222, #cfae37, #8f7400);
@@ -341,29 +364,12 @@ h2 {
     animation: brilhoFundo 6s infinite alternate;
 }
 
-@keyframes brilhoFundo {
-    0% {
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
-    }
-    100% {
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    }
-}
-
 #tela-login h1 {
     font-family: 'Cinzel', serif;
     margin-bottom: 10px;
     font-size: 2rem;
     color: gold;
     animation: brilhoTexto 3s infinite alternate;
-}
-
-@keyframes brilhoTexto {
-    0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
-    100% { text-shadow: 0 0 25px rgba(255, 255, 150, 1); }
 }
 
 #tela-login h4 {
@@ -414,10 +420,131 @@ h2 {
     background-color: #ffdf00;
 }
 
-@keyframes pulsarBotao {
-    0% { transform: scale(1); box-shadow: 0 0 8px rgba(255, 215, 0, 0.3); }
-    50% { transform: scale(1.05); box-shadow: 0 0 18px rgba(255, 215, 0, 0.7); }
-    100% { transform: scale(1); box-shadow: 0 0 8px rgba(255, 215, 0, 0.3); }
+/* ==================== DIREITOS ==================== */
+#direitos {
+    color: black;
+    font-size: 1.2rem;
+    background-color: #ebd456;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+/* ==================== KEYFRAMES ==================== */
+@keyframes surgirTopo {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes brilhoTitulo {
+    from {
+        text-shadow: 0 0 5px gold;
+    }
+
+    to {
+        text-shadow: 0 0 25px yellow;
+    }
+}
+
+@keyframes aparecerItem {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subir {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes girarLento {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+        color: white;
+    }
+
+    50% {
+        transform: scale(1.2);
+        color: gold;
+    }
+}
+
+@keyframes brilhoFundo {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+}
+
+@keyframes brilhoTexto {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    }
+
+    100% {
+        text-shadow: 0 0 25px rgba(255, 255, 150, 1);
+    }
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 1000px) {
+    #topo h1 {
+        font-size: 2rem;
+    }
+
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+
+    .compras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #topo h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .compras {
+        grid-template-columns: 1fr;
+    }
 }
 
 #tela-login p {
@@ -446,4 +573,24 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* --- Efeito pulsar dourado para os inputs --- */
+#tela-login input {
+    animation: pulsarBotao 3s infinite ease-in-out;
+}
+
+/* (já existente, mas garantindo que está aí) */
+@keyframes pulsarBotao {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 18px rgba(255, 215, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    }
 }
