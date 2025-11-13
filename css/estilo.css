@@ -26,7 +26,7 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     padding: 10px;
@@ -303,16 +303,31 @@ h2 {
     .compras {
         grid-template-columns: repeat(2, 1fr);
     }
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+    #topo h1 {
+        font-size: 3rem;
+    }
+    #topo img{
+        width: 10vw;
+    }
 }
 
 @media (max-width: 600px) {
     .compras {
         grid-template-columns: repeat(1, 1fr);
     }
+    #topo h1{
+        font-size: 1.8rem;
+    }
+    #topo img{
+        width: 8vw;
+    }
 }
 
 /* ==================== LOGIN ==================== */
-/* ==================== LOGIN ==================== */
+
 #tela-login {
     color: white;
     background: linear-gradient(135deg, #1a1a1a, #222, #cfae37, #8f7400);
