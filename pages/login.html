@@ -20,7 +20,10 @@
 
         <!-- MENU PRINCIPAL -->
         <div id="menu">
+
+            <!-- Esse botão não abre página nenhuma, ele só existe pra o JS pegar e abrir o menu lateral -->
             <a href="javascript:void(0);" id="menu-toggle">☰</a>
+
             <div class="menu-links">
                 <a href="../index.html">Home</a>
                 <a href="#">Login</a>
@@ -30,7 +33,10 @@
 
         <!-- MENU LATERAL -->
         <div id="menu-lateral">
+
+            <!-- Esse botão também não vai pra lugar algum, é só o que o JS usa para fechar o menu -->
             <a href="javascript:void(0);" id="close-btn">×</a>
+
             <a href="../index.html">Home</a>
             <a href="produtos.html">Produtos</a>
             <a href="#direitos">Contato</a>
@@ -50,6 +56,7 @@
             <p>Não tem conta? <a href="#">Cadastre-se</a></p>
         </div>
 
+        <!-- Aqui o HTML chama o JS externo, que é o responsável por fazer o menu aparecer e sumir -->
         <script src="../js/script.js"></script>
     </div>
 

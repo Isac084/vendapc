@@ -19,9 +19,14 @@
                 <h1><i class="fas fa-crown"></i> R . D . G <i class="fas fa-crown"></i></h1>
             </div>
         </header>
+
         <div id="container">
+
             <div id="menu">
+
+                <!-- Esse botão não abre página; ele só serve pro JS pegar e abrir o menu lateral -->
                 <a href="javascript:void(0);" id="menu-toggle">☰</a>
+
                 <div class="menu-links">
                     <a href="#gamer">PC Gamer</a>
                     <a href="#processador">Processadores</a>
@@ -29,13 +34,20 @@
                     <a href="#video">Placas de Vídeo</a>
                 </div>
             </div>
+
             <div id="menu-lateral">
+
+                <!-- Esse botão só existe para o JS conseguir fechar o menu -->
                 <a href="javascript:void(0);" id="close-btn">×</a>
+
                 <a href="../index.html">Home</a>
                 <a href="#">Produtos</a>
                 <a href="#direitos">Contato</a>
             </div>
+
+            <!-- Aqui o JS é carregado, e ele é quem faz o menu abrir e fechar -->
             <script src="../js/script.js"></script>
+
             <div id="pesquisa">
                 <div class="search-box">
                     <input type="text" class="search-input" placeholder="Pesquisar...">
@@ -43,16 +55,20 @@
                         &#128269;
                     </button>
                 </div>
-
             </div>
+
             <h2>PC Gamer</h2>
             <div class="compras" id="gamer">
+
+                <!-- Os produtos começam aqui -->
                 <div class="pc" id="pc2">
                     <a href="#">
                         <img src="../imagens/images.jpg" alt="">
                         <h3>PC Gamer R.D.G Juno V</h3>
                     </a>
                 </div>
+
+                <!-- O resto segue igual, então mantive como está -->
                 <div class="pc" id="pc2">
                     <a href="#">
                         <img src="../imagens/images.jpg" alt="">
@@ -96,14 +112,18 @@
                     </a>
                 </div>
             </div>
+
             <h2>---Processadores---</h2>
             <div id="processador" class="compras">
+
                 <div class="pc">
                     <a href="#">
                         <img src="../imagens/ryzen.jpg" alt="">
                         <h3>Ryzen 7 XXXXX</h3>
                     </a>
                 </div>
+
+                <!-- Mantive o resto igual -->
                 <div class="pc">
                     <a href="#">
                         <img src="../imagens/ryzen.jpg" alt="">
@@ -147,14 +167,18 @@
                     </a>
                 </div>
             </div>
+
             <h2>Placas Mãe</h2>
             <div class="compras" id="placa">
+
                 <div class="pc">
                     <a href="#">
                         <img src="../imagens/placa.jpg" alt="">
                         <h3>Placa Mãe Gigabyte</h3>
                     </a>
                 </div>
+
+                <!-- Mantive os demais iguais -->
                 <div class="pc">
                     <a href="#">
                         <img src="../imagens/placa.jpg" alt="">
@@ -198,14 +222,18 @@
                     </a>
                 </div>
             </div>
+
             <h2>Placas de Vídeo</h2>
             <div class="compras" id="video">
+
                 <div class="pc">
                     <a href="#">
                         <img src="../imagens/video.jpg" alt="">
                         <h3>RTX XXXX</h3>
                     </a>
                 </div>
+
+                <!-- Outros itens mantidos -->
                 <div class="pc">
                     <a href="#">
                         <img src="../imagens/video.jpg" alt="">
@@ -249,11 +277,13 @@
                     </a>
                 </div>
             </div>
+
             <div id="agradecimento">
                 <img src="../imagens/ryo.jpg" alt="">
                 <h3>Obrigado por visitar nossa loja!</h3>
             </div>
         </div>
+
         <footer>
             <div id="direitos">
                 <p>&#169 Direitos reservados - Isac Nichollas Melo dos Santos & Gabriel Veríssimo</p> <br>
